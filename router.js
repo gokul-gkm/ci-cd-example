@@ -32,6 +32,7 @@ router.post('/register', async (req, res) => {
         await user.save();
         res.render('base', { success: 'Registration successful. Please login.' });
     } catch (error) {
+        console.log(error);
         res.render('base', { error: 'Error during registration' });
     }
 });
@@ -52,6 +53,7 @@ router.post('/login', async (req, res) => {
             res.render('base', { error: 'Invalid username or password' });
         }
     } catch (error) {
+        console.log(error);
         res.render('base', { error: 'Error during login' });
     }
 });
