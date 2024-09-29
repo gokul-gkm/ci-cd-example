@@ -1,0 +1,19 @@
+<%- include('header') -%>
+<%- include('navbar') -%>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Smartphones</h1>
+    <div class="card-deck">
+        <% phones.forEach(phone => { %>
+            <div class="card bg-warning rounded-4">
+                <img src="/assets/<%= phone.image %>" class="card-img-top" alt="<%= phone.title %>">
+                <div class="card-body">
+                    <h5 class="card-title"><%= phone.title %></h5>
+                    <p class="card-text"><%= phone.description %></p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<%- include('footer') -%>
