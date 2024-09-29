@@ -61,6 +61,7 @@ router.get('/home', isAuthenticated, async (req, res) => {
         const phones = await Phone.find();
         res.render('home', { title: 'Home', user: req.session.user, phones });
     } catch (error) {
+        console.log(error);
         res.render('home', { title: 'Home', error: 'Error fetching phone data' });
     }
 });
@@ -97,6 +98,7 @@ router.get('/init-data', async (req, res) => {
 
         res.send('Data initialized successfully. Default user: admin@example.com / password123');
     } catch (error) {
+        console.log(error);
         res.status(500).send('Error initializing data');
     }
 });
