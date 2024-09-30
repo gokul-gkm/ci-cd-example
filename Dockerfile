@@ -14,7 +14,7 @@ RUN npm ci
 COPY . .
 
 # Expose the port your app runs on
-EXPOSE 3000
+EXPOSE 3333
 
 # Start the application
 CMD ["npm", "run", "start:prod"]
