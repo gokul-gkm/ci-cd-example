@@ -11,7 +11,7 @@ require('./database');  // Add this line to connect to MongoDB
 
 dotenv.config();
 
-const port = process.env.PORT || 3333;
+const port = process.env.PORT || 3030;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
